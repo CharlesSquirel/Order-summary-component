@@ -1,0 +1,224 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* VARIABLES */
+:root {
+  --bg-plan: #f7f9ff;
+  --bg: #e0e8ff;
+  --btn: #382ae1;
+  --btn-hover: #766cf1;
+  --h1: #1f2e55;
+  --p: #717fa6;
+  --white: #fff;
+}
+
+/* MAIN AND TYPOGRAPHY */
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  color: var(--p);
+  background: var(--bg) url(pattern-background-mobile.svg) no-repeat;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 1.375rem;
+  line-height: 1.8125rem;
+  color: var(--h1);
+  margin-top: 2rem;
+}
+
+a {
+  margin-left: 1.875rem;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+  color: var(--btn);
+}
+
+.article__paragraph {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.annual-plan {
+  font-weight: 900;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  color: var(--h1);
+}
+
+.price {
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+}
+
+.cancel {
+  font-weight: 900;
+  line-height: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* IMG */
+#hero-img {
+  width: 20.4375rem;
+  height: 10rem;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+#icon-music {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* BTN */
+button {
+  width: 17.4375rem;
+  height: 3.125rem;
+  background: var(--btn);
+  box-shadow: 0px 1.25rem 1.25rem rgba(56, 42, 225, 0.190291);
+  border-radius: 0.6875rem;
+  color: var(--white);
+  font-weight: 900;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1.5rem;
+  border: none;
+}
+
+/* CONTAINERS */
+section,
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 20.4375rem;
+  height: 35.4375rem;
+  box-shadow: 0px 2.5rem 2.5rem -1.25rem rgba(13, 48, 189, 0.151826);
+  border-radius: 1.25rem;
+  background: var(--white);
+}
+
+.annual-plan-flex {
+  display: flex;
+  align-items: center;
+  width: 17.4375rem;
+  height: 5.0625rem;
+  background: var(--bg-plan);
+  border-radius: 0.6875rem;
+  padding-left: 1rem;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.annual-plan-flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1875rem;
+}
+
+@media screen and (min-width: 80rem) {
+  body {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    background: var(--bg) url(pattern-background-desktop.svg) no-repeat;
+    background-size: contain;
+  }
+
+  h1 {
+    font-size: 1.8125rem;
+    line-height: 2.3125rem;
+    margin-top: 2.8125rem;
+  }
+
+  a {
+    margin-left: 4.625rem;
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+  }
+
+  .article__paragraph {
+    margin-top: 1.0625rem;
+  }
+
+  .annual-plan {
+    font-size: 1rem;
+    line-height: 1.3125rem;
+  }
+
+  .price {
+    font-size: 1rem;
+    line-height: 1.3125rem;
+  }
+
+  .cancel {
+    font-size: 0.9375rem;
+    margin-top: 2rem;
+  }
+
+  /* IMG */
+  #hero-img {
+    width: 28.125rem;
+    height: 13.75rem;
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+
+  /* BTN */
+  button {
+    width: 22.125rem;
+    margin-top: 2.9375rem;
+  }
+
+  /* CONTAINERS */
+  section {
+    width: 28.125rem;
+    height: 43.5625rem;
+  }
+
+  .annual-plan-flex {
+    width: 22.125rem;
+    height: 6.125rem;
+    padding-left: 1.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .annual-plan-flex-column {
+    gap: 0.375rem;
+  }
+}
+
+@media (hover: hover) {
+  button:hover,
+  a:hover,
+  .cancel:hover {
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: var(--btn-hover);
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover {
+    color: var(--btn-hover);
+    text-decoration: none;
+  }
+
+  .cancel:hover {
+    color: var(--h1);
+    transition: all 0.3s ease-in-out;
+  }
+}
